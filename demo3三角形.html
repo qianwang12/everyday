@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            margin-bottom:50px;
+        }
+        .div1{
+            width:200px;
+            height:100px;
+            border:10px solid red;
+        }
+        .div2{
+            width:200px;
+            height:100px;
+            border-left:10px solid red;
+            border-top:10px solid green;
+            border-right:10px solid blue;
+            border-bottom:10px solid yellow;
+        }
+        .div3{
+            width:0;
+            height:0;
+            border-left:10px solid red;
+            border-top:10px solid green;
+            border-right:10px solid blue;
+            border-bottom:10px solid yellow;
+        }
+        .div4{
+            width:0;
+            height:0;
+            border-left:10px solid red;
+            border-top:10px solid transparent;
+            border-right:10px solid transparent;
+            border-bottom:10px solid transparent;
+        }
+        .div5{
+            width:0px; /*设置宽高为0*/
+            height:0px;/*可不写*/
+            border-width:10px;   /*数值控制三角的大小，垂直的位置*/
+            border-color:#f00 transparent transparent transparent;/*上右下左，transparent是透明的*/
+            border-style:solid dashed dashed dashed;/*设置边框样式，dashed是兼容IE6写的*/
+            overflow:hidden;/*兼容IE6最小高度不为0写的*/
+        }
+        .div6{
+            width: 0px;
+            height: 0px;
+            margin: 100px auto;
+            border-width:10px 30px;
+            border-color:transparent transparent transparent red;
+            border-style:solid;
+        }
+        .div7{
+            width: 0;
+            border-width: 20px 10px;
+            border-style: solid;
+            border-color: red red transparent transparent;
+        }
+        .san {
+            border-width: 50px;
+            border-color: transparent transparent transparent #f40;
+            border-style: solid;
+            position: relative;
+        }
+        .si {
+            border-width: 30px;
+            border-color: transparent transparent transparent #fff;
+            border-style: solid;
+            position: absolute;
+            left: -50px;
+            top: -30px;
+        }
+        .select-toast{
+            width: 150px;
+            padding: 10px;
+            line-height: 20px;
+            color: #9c623f;
+            background-color: rgba(255, 236, 193, 0.72);
+            border-radius: 10px;
+            position: relative;
+        }
+        .select-toast::before{
+            content:"";
+            border-width: 10px;
+            border-color:transparent rgba(255, 236, 193, 0.72) transparent transparent;
+            border-style: solid;
+            position: absolute;
+            left: -20px;
+            top: 10px;
+        }
+        .div8{
+            width: 140px;
+            height: 40px;
+            background-color: rgb(244,121,128);
+            position: relative;
+        }
+        .div8:before,
+        .div8:after {
+            content: "";
+            position: absolute;
+            left: 0; right: 0;
+            border-style: solid;
+        }
+        .div8:before {
+            top: -3px;
+            border-width: 0 3px 3px;
+            border-color: transparent transparent red;
+        }
+        .div8:after {
+            bottom: -3px;
+            border-width: 3px 3px 0;
+            border-color: red transparent transparent;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div>
+<div class="div4"></div>
+<div class="div5"></div>
+<div class="div6"></div>
+<div class="div7"></div>
+<!--html结构-->
+<div class="san">
+    <div class="si"></div>
+</div>
+<!--对话框-->
+<div class="select-toast">早安，哈哈！今天天气不错，很好！</div>
+<div class="select-toast">早安，哈哈！今天天气不错，很好！早安，哈哈！今天天气不错，很好！</div>
+<div class="select-toast">早安，哈哈！今天天气不错，很好！早安，哈哈！今天天气不错，很好！早安，哈哈！今天天气不错，很好！</div>
+<div class="div8"></div>
+
+</body>
+</html>
